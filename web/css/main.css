@@ -1,0 +1,45 @@
+
+body {
+  background: #fff;
+  font-family: 'Open Sans', sans-serif;
+  color:#4e4e4e;
+  line-height: 22px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600; 
+  font-family: 'Open Sans', sans-serif;
+  color:#4e4e4e;
+}
+h1{
+	font-size: 45px;
+}
+p{
+	font-size: 18px;
+}
+.center{
+	text-align: center;
+}
+
+.code{
+	width: 90%;
+	margin-left: 50px;
+	background-color: #eee;
+	border: 3px solid #4e4e4e;
+	margin-bottom: 50px;
+}
+.sub-menu a{
+	background-color: none;
+	text-decoration:none;
+	color: #fafafa;
+}
+
+.sub-menu li a.active{
+    background-color: none !important;
+    color: #d19b3d;
+}
