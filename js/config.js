@@ -6,31 +6,31 @@ var lng= -74.150343;  //Change the value with your address Longitude
 var skillData = {
 	skill1: [
 		{
-			title: "SIEM Administration",
+			title: "Explainable AI",
             color: "#00C5CD",
 			border: "4px solid #f4709f",
 			value: '90%'
 		},
 		{
-			title: "Device Integration with SIEM",
+			title: "Natural Language Processing",
             color: "#00C5CD",
 			border: "4px solid #f4709f",
 			value: '100%'
 		},
 		{
-			title: "SIEM Implementation & Design",
+			title: "Clustering",
             color: "#00C5CD",
 			border: "4px solid #f4709f",
 			value: '105%'
 		},
         {
-            title: "SecOps using RSA Archer",
+            title: "Jupyter Notebooks",
             color: "#00C5CD",
             border: "4px solid #f4709f",
             value: '95%'
         },
         {
-            title: "Development of Advisory Reports",
+            title: "PyTorch",
             color: "#00C5CD",
             border: "4px solid #f4709f",
             value: '105%'

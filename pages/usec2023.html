@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35692672-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-35692672-2');
+    </script>
+<title>USEC 2023 Paper</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<link rel="stylesheet" href="../css/w3.css">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css"> -->
+<link rel="stylesheet" href="../css/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="#authors" class="w3-bar-item w3-button w3-theme-l1">Paper</a>
+    <a href="#abstract" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Abstract</a>
+    <a href="#online_access" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Access</a>
+    <a href="#bibtex" class="w3-bar-item w3-button w3-hide-small w3-hover-white">BibTex</a>
+    <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>-->
+  </div>
+</div>
+
+<!-- Sidebar -->
+<!--<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#authors">Authors</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#abstract">Abstract</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#online_access">Online Access</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#bibtex">BibTeX Reference</a>
+</nav>-->
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:9em">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal" id="authors"><b>Power to the Data Defenders: Human-Centered Disclosure Risk Calibration of Open Data</b></h1>
+      <p>This paper has been published in proceedings of Symposium on Usable Security and Privacy (USEC) 2023. The authors of this paper are: </p>
+      <ul>
+        <li>Kaustav Bhattacharjee &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PhD Candidate, Department of Informatics, New Jersey Institute of Technology, USA</li>
+        <li>Aritra Dasgupta &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assistant Professor, Department of Informatics, New Jersey Institute of Technology, USA</li>
+      </ul>
+    </div>
+    <!--<div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+    </div>-->
+  </div>
+
+  <div class="w3-row" id="abstract">
+    <div class="w3-twothird w3-container" >
+      <h2 class="w3-text-teal" >Abstract</h2>
+      <p>The open data ecosystem is susceptible to vulnerabilities due to disclosure risks. Though the datasets are anonymized during release, the prevalence of the release-and-forget model makes the data defenders blind to privacy issues arising after the dataset release. One such issue can be the disclosure risks in the presence of newly released datasets which may compromise the privacy of the data subjects of the anonymous open datasets. In this paper, we first examine some of these pitfalls through the examples we observed during a red teaming exercise and then envision other possible vulnerabilities in this context. We also discuss proactive risk monitoring, including developing a collection of highly susceptible open datasets and a visual analytic workflow that empowers data defenders towards undertaking dynamic risk calibration strategies.</p>
+      <br>
+      <!-- <img src="figures/datasetDevelopment_v2.png" class="w3-border w3-padding">
+      <figcaption class="w3-small">Fig: <b>Empowering disclosure evaluation through visual analytic techniques.</b> </figcaption> -->
+    </div>
+    <!--<div class="w3-third w3-container">
+      <img src="figure3.png" class="w3-border w3-padding">
+    </div>-->
+  </div>
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal" id="online_access">Online Access</h3>
+      <ul>
+        <li> Paper: <a href="papers/usec2023.pdf" target="_blank" class="w3-teal">USEC 2023 (PDF Version)</a><!--<a href="https://diglib.eg.org/bitstream/handle/10.1111/cgf14032/v39i3pp675-692.pdf" target="_blank" class="w3-teal">https://diglib.eg.org/bitstream/handle/10.1111/cgf14032/v39i3pp675-692.pdf</a> --> </li>
+        <li> NDSS Symposium Paper Page: <a href="https://www.ndss-symposium.org/ndss-paper/auto-draft-352/" target="_blank" class="w3-teal">https://www.ndss-symposium.org/ndss-paper/auto-draft-352/</a> </li>
+        <li> NDSS Symposium PDF: <a href="https://www.ndss-symposium.org/wp-content/uploads/2023/02/usec2023-237256-paper.pdf" target="_blank" class="w3-teal">https://www.ndss-symposium.org/wp-content/uploads/2023/02/usec2023-237256-paper.pdf</a> </li>
+        <li> arXiv PDF: <a href="https://arxiv.org/pdf/2304.11278.pdf" target="_blank" class="w3-teal">https://arxiv.org/pdf/2304.11278.pdf</a> </li>
+        <!-- <li> Presentation: <a href="https://www.youtube.com/watch?v=CQxs9Hh_1f4" target="_blank" class="w3-teal">Youtube Link for EuroVis 2020 STAR Presentation</a> </li> -->
+      </ul>
+    </div>
+    <!--<div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+    </div>-->
+  </div>
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">BibTeX Reference</h3>
+      <pre id="bibtex">
+    @inproceedings{bhattacharjee_power2023,
+    title = {{Power to the Data Defenders: Human-Centered Disclosure Risk Calibration of Open Data}},
+    author = {Bhattacharjee, Kaustav and Dasgupta, Aritra},
+    year = {2023},
+    booktitle={Symposium on Usable Security and Privacy (USEC) 2023},
+    address={San Diego, CA, USA},
+    publisher = {Network and Distributed System Security (NDSS) Symposium},
+    DOI = {10.14722/usec.2023.237256}
+    }
+      </pre>
+    </div>
+    <!--<div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+    </div>-->
+  </div>
+
+  <!-- Pagination -->
+  <!--
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="#">3</a>
+      <a class="w3-button w3-hover-black" href="#">4</a>
+      <a class="w3-button w3-hover-black" href="#">5</a>
+      <a class="w3-button w3-hover-black" href="#">»</a>
+    </div>
+  </div>
+-->
+  <footer id="myFooter">
+    <!--<div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>Footer</h4>
+    </div>-->
+
+    <div class="w3-container w3-theme-l1">
+      <p>Design theme by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

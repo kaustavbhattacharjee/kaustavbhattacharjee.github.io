@@ -309,16 +309,20 @@ p.tagline {
 	border-radius: 6px;
 }
 #home .idCard {
-	width: 48%;
+	width: 62%;
 	float: right;
 	text-align: right;
 	padding-top: 15px;
 }
+/* #home .special_fa_span {
+	float: none!important;
+	font-size: 15px;
+} */
 #home .idCard span {
 	float: right;
 	font-size: 15px;
 }
-#home .idCard i {
+#home .idCard i  {
 	clear: both;
 	float: right;
 	text-align: center;
@@ -328,6 +332,17 @@ p.tagline {
 	margin: 0px 10px 5px 10px;
 	background-color: #FC6F5C;
 }
+#home .special_fa  {
+	clear: both;
+	float: right;
+	text-align: center;
+	width: 25px;
+	height: 25px;
+	padding-top: 5px;
+	margin: 0px 10px 5px 10px;
+	background-color: transparent!important;
+}
+
 #fullscreen-slider {
 	display: none;
 	position: relative;
@@ -524,6 +539,13 @@ h3.tagline-lg {
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 11px;
+	margin: 0px auto 30px auto;
+	text-align: center;
+}
+.social-link span {
+	color:#1E1E1E;
+	font-size: 1.5em;
+	text-transform: none;
 	margin: 0px auto 30px auto;
 	text-align: center;
 }
@@ -1530,4 +1552,21 @@ margin-bottom:20px;
         -ms-transition-property: top, left, opacity;
          -o-transition-property: top, left, opacity;
             transition-property: transform, opacity;
+}
+
+ul {
+	list-style: none;
+  }
+li {
+	margin: 0.25rem;
+}
+li::before {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	display: inline-block;
+	line-height: 2rem;
+	color: white;
+	text-align: left;
+	margin-right: 0.5rem;
 }

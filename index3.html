@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaustav Bhattacharjee</title>
+  <link rel="stylesheet" href="css/style3.css">
+</head>
+<body>
+  <header>
+    <h1>Kaustav Bhattacharjee</h1>
+    <h2>A Ph.D. Candidate in Computer Science</h2>
+  </header>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a Ph.D. Candidate in Computer Science at the University of California, Berkeley. My research interests include natural language processing, machine learning, and artificial intelligence. I am passionate about using technology to solve real-world problems.</p>
+    </section>
+    <section id="research">
+      <h2>My Research</h2>
+      <p>My research focuses on developing new machine learning algorithms for natural language processing. I am currently working on projects to improve the accuracy of machine translation, question answering, and sentiment analysis.</p>
+    </section>
+    <section id="publications">
+      <h2>My Publications</h2>
+      <ul>
+        <li><a href="https://arxiv.org/abs/2205.09214">A New Machine Learning Algorithm for Natural Language Processing</a></li>
+        <li><a href="https://www.aclweb.org/anthology/2022.acl-main.2039">Improving the Accuracy of Machine Translation with a New Machine Learning Algorithm</a></li>
+        <li><a href="https://www.aaai.org/ojs/index.php/AAAI/article/view/3436">Improving the Accuracy of Question Answering with a New Machine Learning Algorithm</a></li>
+        <li><a href="https://www.aclweb.org/anthology/2022.acl-main.2040">Improving the Accuracy of Sentiment Analysis with a New Machine Learning Algorithm</a></li>
+      </ul>
+    </section>
+    <section id="contact">
+      <h2>My Contact Information</h2>
+      <p>You can contact me at <a href="mailto:kaustavbhattacharjee@berkeley.edu">kaustavbhattacharjee@berkeley.edu</a> or <a href="tel:+1-510-555-1212">+1-510-555-1212</a>.</p>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright &copy; Kaustav Bhattacharjee 2023</p>
+  </footer>
+  <script>
+    // Get the main content area
+    var main = document.getElementById("main");
+
+    // Get the sections
+    var sections = main.getElementsByTagName("section");
+
+    // Set the initial scroll position of each section
+    for (var i = 0; i < sections.length; i++) {
+      sections[i].style.top = i * 100 + "px";
+    }
+
+    // Add a listener for the scroll event
+    window.addEventListener("scroll", function() {
+      // Get the current scroll position
+      var scrollY = window.scrollY;
+
+      // Update the position of each section
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].style.top = scrollY - i * 100 + "px";
+      }
+    });
+  </script>
+</body>
+</html>
