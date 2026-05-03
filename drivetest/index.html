@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NJ Driver Test Practice</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     SETUP VIEW  (first-time password creation)
+═══════════════════════════════════════════════════════════ -->
+<div id="view-setup" class="hidden">
+  <div class="auth-card">
+    <div class="auth-logo">🚗</div>
+    <h1 class="auth-title">Create Your Password</h1>
+    <p class="auth-sub">NJ Driver Test Practice — set a password to protect your progress.</p>
+    <form id="form-setup" novalidate>
+      <div class="form-group">
+        <label for="setup-pwd">Password</label>
+        <input type="password" id="setup-pwd" placeholder="Choose a password" autocomplete="new-password" required />
+      </div>
+      <div class="form-group">
+        <label for="setup-pwd2">Confirm Password</label>
+        <input type="password" id="setup-pwd2" placeholder="Repeat password" autocomplete="new-password" required />
+      </div>
+      <span id="setup-error" class="form-error"></span>
+      <button type="submit" class="btn btn-primary btn-full" style="margin-top:.5rem">Create Account</button>
+    </form>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     LOGIN VIEW
+═══════════════════════════════════════════════════════════ -->
+<div id="view-login" class="hidden">
+  <div class="auth-card">
+    <div class="auth-logo">🚗</div>
+    <h1 class="auth-title">NJ Driver Test Practice</h1>
+    <p class="auth-sub">State of New Jersey — Motor Vehicle Commission<br>Basic Driver Examination</p>
+    <form id="form-login" novalidate>
+      <div class="form-group">
+        <label for="login-pwd">Password</label>
+        <input type="password" id="login-pwd" placeholder="Enter your password" autocomplete="current-password" required />
+      </div>
+      <span id="login-error" class="form-error"></span>
+      <button type="submit" class="btn btn-primary btn-full" style="margin-top:.5rem">Sign In</button>
+    </form>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     DASHBOARD VIEW
+═══════════════════════════════════════════════════════════ -->
+<div id="view-dashboard" class="hidden page">
+  <!-- Nav -->
+  <nav class="topnav">
+    <div class="container">
+      <a class="topnav-brand" href="#">
+        <span class="plate">NJ</span>
+        Driver Test Practice
+      </a>
+      <div class="topnav-right">
+        <span class="nav-user">MVC Exam Prep</span>
+        <button class="btn-logout" id="btn-logout">Sign out</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Body -->
+  <main class="main">
+    <div class="container">
+      <div class="dash-header">
+        <h1>Your Progress</h1>
+        <p>State of New Jersey · Basic Driver Examination · 4 Exams · 200 Questions</p>
+      </div>
+
+      <!-- Overall stats -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="val" id="stat-total">200</div>
+          <div class="lbl">Total Questions</div>
+        </div>
+        <div class="stat-card">
+          <div class="val" id="stat-attempted">0</div>
+          <div class="lbl">Attempted</div>
+        </div>
+        <div class="stat-card">
+          <div class="val" id="stat-mastered">0</div>
+          <div class="lbl">Mastered ✅</div>
+        </div>
+        <div class="stat-card">
+          <div class="val" id="stat-pct">0%</div>
+          <div class="lbl">Overall Score</div>
+        </div>
+      </div>
+
+      <!-- Exam cards -->
+      <div class="exams-grid" id="exams-grid"></div>
+    </div>
+  </main>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     QUIZ VIEW
+═══════════════════════════════════════════════════════════ -->
+<div id="view-quiz" class="hidden page">
+
+  <!-- Sticky quiz header -->
+  <div class="quiz-header">
+    <div class="container">
+      <button class="quiz-back" id="btn-quiz-back">← Dashboard</button>
+      <span class="quiz-title" id="quiz-exam-title">Exam #1</span>
+      <span class="quiz-counter" id="quiz-counter">1 / 50</span>
+    </div>
+    <div class="quiz-progress-bar">
+      <div class="quiz-progress-fill" id="quiz-progress-fill" style="width:2%"></div>
+    </div>
+  </div>
+
+  <!-- Question body -->
+  <div id="view-quiz-body" class="quiz-body">
+    <div class="container">
+      <div class="question-card">
+        <div class="question-num" id="question-num">Question 1 of 50</div>
+        <div class="question-text" id="question-text"></div>
+        <div class="options-list" id="options-list"></div>
+        <div class="feedback-banner hidden" id="feedback-banner"></div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="quiz-nav">
+        <button class="btn btn-ghost" id="btn-prev">← Prev</button>
+        <div class="quiz-nav-center" id="quiz-nav-hint" style="font-size:.85rem;color:var(--muted)">
+          Select an answer to continue
+        </div>
+        <button class="btn btn-primary" id="btn-next" disabled>Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Score summary (hidden until end) -->
+  <div id="view-score" class="hidden">
+    <div class="container">
+      <div class="card score-card">
+        <div class="score-ring" id="score-ring">
+          <span class="pct" id="score-pct">0%</span>
+          <span class="lbl2">score</span>
+        </div>
+        <h2 class="score-title" id="score-title">Well done!</h2>
+        <p class="score-sub" id="score-sub"></p>
+        <p style="font-size:.9rem;color:var(--muted);margin-bottom:1.5rem">
+          <strong id="score-correct">0</strong> of <strong id="score-total">50</strong> questions mastered
+        </p>
+        <div class="score-actions">
+          <button class="btn btn-danger"   id="btn-retry-wrong">🔄 Retry Wrong</button>
+          <button class="btn btn-outline"  id="btn-review-from-score">📖 Review All</button>
+          <button class="btn btn-primary"  id="btn-back-dash-score">🏠 Dashboard</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     REVIEW VIEW
+═══════════════════════════════════════════════════════════ -->
+<div id="view-review" class="hidden page">
+
+  <!-- Header -->
+  <div class="review-header">
+    <div class="container">
+      <button class="quiz-back" id="btn-review-back">← Dashboard</button>
+      <span class="review-title" id="review-exam-title">Exam #1 — Review</span>
+      <button class="btn btn-gold btn-sm" id="btn-review-practice">▶ Practice</button>
+    </div>
+  </div>
+
+  <main class="main">
+    <div class="container">
+      <!-- Filters -->
+      <div class="review-filters">
+        <button class="filter-btn active" data-filter="all">All (50)</button>
+        <button class="filter-btn" data-filter="mastered">✅ Mastered (0)</button>
+        <button class="filter-btn" data-filter="missed">❌ Missed (0)</button>
+        <button class="filter-btn" data-filter="skipped">⏭ Not attempted (50)</button>
+      </div>
+
+      <!-- Review list -->
+      <div id="review-list"></div>
+    </div>
+  </main>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     TOAST
+═══════════════════════════════════════════════════════════ -->
+<div id="toast"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
