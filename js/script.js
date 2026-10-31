@@ -6,7 +6,6 @@ $(window).load(function() {
 
 $(document).ready(function() {
 
-  initializeMap(lat,lng);
   
 	//Elements Appear from top
 	$('.item_top').each(function() {
