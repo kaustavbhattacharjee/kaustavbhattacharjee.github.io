@@ -951,7 +951,7 @@ nav.slide-effect a {
 /* --------- Skills Buttons Hover ----*/
 .btn-skills {
 	position: relative;
-	width: 150px;
+	width: 200px; /* was 150px; widened for 5 skill categories */
 	display: inline-block;
 	margin: 15px 25px;
 	outline: none;
@@ -973,14 +973,14 @@ nav.slide-effect a {
 }
 .btn-skills {
 	overflow: hidden;
-	margin: 0 15px;
+	margin: 0 8px; /* was 0 15px */
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
 }
 .btn-skills span {
 	display: block;
-	padding: 10px 20px;
+	padding: 10px 10px; /* was 10px 20px */
 	background: #FC6F5C;
 	-webkit-transition: -webkit-transform 0.3s;
 	-moz-transition: -moz-transform 0.3s;
@@ -1027,6 +1027,18 @@ nav.slide-effect a {
 }
 .btn-skills.skills-green::before {
     background-color: #00CC66;
+}
+.skills-purple {
+	border-left: 4px #8E44AD solid;
+}
+.skills-orange {
+	border-left: 4px #D35400 solid;
+}
+.btn-skills.skills-purple::before {
+	background-color: #8E44AD;
+}
+.btn-skills.skills-orange::before {
+	background-color: #D35400;
 }
 /*--------------PIE Chart ---------- */
 #pie-container {
